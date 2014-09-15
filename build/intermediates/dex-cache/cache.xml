@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/qgf/workspace/adt/vocaedu/propaganda/build/intermediates/pre-dexed/debug/classes-655d73e949d3924d2cd8d38613ad6fb000ebcf9a.jar"
+        jar="/home/qgf/workspace/adt/vocaedu/build/intermediates/exploded-aar/vocaedu/pulltorefresh/unspecified/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="8cb27f8cda6a7238dc0dc3b2d8ae8612b69337fa"/>
+    <item
+        dex="/home/qgf/workspace/adt/vocaedu/propaganda/build/intermediates/pre-dexed/debug/locSDK_4.2-cfa731bcb057af55a1cd9b2938c2debe6c488802.jar"
+        jar="/home/qgf/workspace/adt/vocaedu/propaganda/libs/locSDK_4.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="41b93335a2753c93f8b8f56741615cb81ea72437"/>
+    <item
+        dex="/home/qgf/workspace/adt/vocaedu/propaganda/build/intermediates/pre-dexed/debug/BaiduLBS_Android-b91b54d05c415388eb2fc797d64391c2c803098a.jar"
+        jar="/home/qgf/workspace/adt/vocaedu/propaganda/libs/BaiduLBS_Android.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="54019357b219c338fcbe76d8db5da1f2776c828d"/>
+    <item
+        dex="/home/qgf/workspace/adt/vocaedu/propaganda/build/intermediates/pre-dexed/debug/retrofit-1.6.1-252940a4bcd89c4f7a10ce96898dd61d4fca9863.jar"
+        jar="/home/qgf/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.6.1/efb0a36546aa8857ab8df358b106c1817e03cbee/retrofit-1.6.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="efb0a36546aa8857ab8df358b106c1817e03cbee"/>
+    <item
+        dex="/home/qgf/workspace/adt/vocaedu/propaganda/build/intermediates/pre-dexed/debug/gson-2.2.4-6d6ff5a11cc9e4e5da50c1f93c3d50094f28d104.jar"
+        jar="/home/qgf/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568"/>
+    <item
+        dex="/home/qgf/workspace/adt/vocaedu/propaganda/build/intermediates/pre-dexed/debug/PanoramaGL_0.1-5fee4b22dc31788fbb62aaaed6612d675ee6465a.jar"
+        jar="/home/qgf/workspace/adt/vocaedu/propaganda/libs/PanoramaGL_0.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="bfb84c4975866d1fc1592ed46a6732623d4194ba"/>
+    <item
+        dex="/home/qgf/workspace/adt/vocaedu/propaganda/build/intermediates/pre-dexed/debug/classes-d528f790c58bc8948802fdf8a25256390b23ff19.jar"
+        jar="/home/qgf/workspace/adt/vocaedu/build/intermediates/exploded-aar/vocaedu/ViewPagerIndicator/unspecified/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="f6c6079312cb3e459afb3fba08018d0cb9947c4a"/>
+    <item
+        dex="/home/qgf/workspace/adt/vocaedu/propaganda/build/intermediates/pre-dexed/debug/classes-b5bcb91fd8efab9bcd6c62b3225b1f31c13ee9f2.jar"
+        jar="/home/qgf/workspace/adt/vocaedu/build/intermediates/exploded-aar/vocaedu/SlidingMenu/unspecified/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="be4bfc18ec829d654f7284179c1643bd70f6bfaa"/>
+    <item
+        dex="/home/qgf/workspace/adt/vocaedu/propaganda/build/intermediates/pre-dexed/debug/android-support-v4-32fc3e93285c68f7631437e3cc1339b1691e460b.jar"
+        jar="/home/qgf/workspace/adt/vocaedu/propaganda/libs/android-support-v4.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="48c94ae70fa65718b382098237806a5909bb096e"/>
+    <item
+        dex="/home/qgf/workspace/adt/vocaedu/propaganda/build/intermediates/pre-dexed/debug/picasso-2.3.2-0aff0c3c919fec6b79625be13a8d2f295228e390.jar"
+        jar="/home/qgf/workspace/adt/vocaedu/propaganda/libs/picasso-2.3.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d6b7f0093cec6c9faf65dbfd6a6a345d0ed25e27"/>
+
+</pre-dex-items>

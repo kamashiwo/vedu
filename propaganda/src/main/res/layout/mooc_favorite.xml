@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@color/color_white"
+android:orientation="vertical" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/color_purple" >
+
+    <ImageView
+        android:id="@+id/course_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/imagedescription"
+        android:padding="10dp"
+        android:src="@drawable/mook_back_arrow" />
+
+    <LinearLayout
+        android:id="@+id/function"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mooc_favorite"
+            android:textColor="@color/color_white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/course_slidemenu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/imagedescription"
+        android:padding="10dp"
+        android:src="@drawable/mook_menu" />
+</RelativeLayout>
+
+<ListView
+    android:id="@+id/course_booklist"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+</ListView>
+
+</LinearLayout>

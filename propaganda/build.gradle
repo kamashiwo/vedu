@@ -1,0 +1,33 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.1.0'
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 16
+        versionCode 1
+        versionName '1.0'
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile files('libs/android-support-v4.jar')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.squareup.retrofit:retrofit:1.6.1'
+    compile files('libs/picasso-2.3.2.jar')
+    compile project(':pulltorefresh')
+    compile project(':ViewPagerIndicator')
+    compile project(':SlidingMenu')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/PanoramaGL_0.1.jar')
+    compile files('libs/locSDK_4.2.jar')
+}

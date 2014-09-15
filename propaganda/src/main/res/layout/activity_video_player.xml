@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/videoplayer_frame"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/red">
+
+        <SurfaceView
+        android:id="@+id/videoplayer_surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/videoplay_top"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_playermenu"
+            android:visibility="visible"></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/videoplay_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_playermenu"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/videoplay_resume"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/imagedescription"
+                android:padding="10dp"
+                android:src="@drawable/mook_pause" />
+
+            <RelativeLayout
+                android:id="@+id/videoplay_control"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/videoplay_download"
+                android:layout_toRightOf="@+id/videoplay_resume"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/videoplay_curtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="00:00:00"
+                    android:textColor="@color/color_white" />
+
+                <SeekBar
+                    android:id="@+id/videoplay_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/videoplay_maxtime"
+                    android:layout_toRightOf="@+id/videoplay_curtime" />
+
+                <TextView
+                    android:id="@+id/videoplay_maxtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="00:00:00"
+                    android:textColor="@color/color_white" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/videoplay_download"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toLeftOf="@+id/videoplay_size"
+                android:contentDescription="@string/imagedescription"
+                android:padding="10dp"
+                android:src="@drawable/mook_download" />
+
+            <ImageView
+                android:id="@+id/videoplay_size"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/imagedescription"
+                android:padding="10dp"
+                android:src="@drawable/mook_max" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/videoplay_play"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/imagedescription"
+            android:scaleType="centerInside"
+            android:src="@drawable/mook_play"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

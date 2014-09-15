@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="overview_titile">
+        <item>学院简介</item>
+        <item>现任领导</item>
+        <item>历史前沿</item>
+    </string-array>
+    <string-array name="enrollment_titile">
+        <item>招生</item>
+        <item>就业</item>
+    </string-array>
+
+
+    <string-array name="map_menu">
+        <item>景点</item>
+        <item>校区</item>
+        <item>教学楼</item>
+        <item>办公楼</item>
+        <item>科研机构</item>
+        <item>宿舍</item>
+        <item>美食餐饮</item>
+        <item>商业购物</item>
+        <item>银行</item>
+        <item>医疗药店</item>
+        <item>娱乐场所</item>
+        <item>公交站</item>
+        <item>票务</item>
+    </string-array>
+
+
+</resources>

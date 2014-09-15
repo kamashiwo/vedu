@@ -1,0 +1,37 @@
+<resources>
+
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--<style name="AppTheme" parent="">-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--</style>-->
+
+
+    <style name="default_animation" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_top</item>
+        <item name="android:activityOpenExitAnimation">@anim/hold</item>
+        <item name="android:activityCloseEnterAnimation">@anim/hold</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+
+    <style name="app_theme" parent="@android:style/Theme.Light">
+        <item name="android:windowAnimationStyle">@style/default_animation</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textSize">16dip</item>
+    </style>
+
+
+    <style name="app_theme_notitle" parent="Theme.PageIndicatorDefaults">
+        <item name="android:windowAnimationStyle">@style/default_animation</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16dip</item>
+        <item name="android:textColor">@drawable/tab_pager_indicator_text</item>
+        <item name="android:background">@drawable/tab_pager_indicator_bg</item>
+        <item name="android:listSelector">@drawable/list_selector</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:scrollingCache">false</item>
+        <item name="android:fadingEdge">none</item>
+    </style>
+
+
+</resources>

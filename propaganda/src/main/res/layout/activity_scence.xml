@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/scence_bg">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/overview_back"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/fengmaoscrollView"
+        android:layout_width="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_height="wrap_content" >
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableRow>
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_jisuanjilou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/jisuanjilou" />
+                    <TextView
+                        android:id="@+id/fengmao_jisuanjilou_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="计算机楼"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_tushuguan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/tushuguan" />
+                    <TextView
+                        android:id="@+id/fengmao_tushuguan_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="图书馆"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_sushequ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/sushequ" />
+                    <TextView
+                        android:id="@+id/fengmao_sushequ_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="宿舍区"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_huxinting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/huxinting" />
+                    <TextView
+                        android:id="@+id/fengmao_huxinting_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="湖心亭"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_shiyanshinei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/shiyanshinei" />
+                    <TextView
+                        android:id="@+id/fengmao_shiyanshinei_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="实验室内"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_jiaowulou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/jiaowulou" />
+                    <TextView
+                        android:id="@+id/fengmao_jiaowulou_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="教务楼"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_caoping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/caoping" />
+                    <TextView
+                        android:id="@+id/fengmao_caoping_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="草坪"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_yuelanshi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/yuelanshi" />
+                    <TextView
+                        android:id="@+id/fengmao_yuelanshi_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="阅览室"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_qicheshixun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/qicheshixun" />
+                    <TextView
+                        android:id="@+id/fengmao_qicheshixun_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="汽车实训基地"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_jidianshixun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/jidianshixun" />
+                    <TextView
+                        android:id="@+id/fengmao_jidianshixun_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="机电实训基地"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+            </TableRow>
+            <TableRow>
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_zhubaoshixun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/zhubaoshixun" />
+                    <TextView
+                        android:id="@+id/fengmao_zhubaoshixun_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="珠宝实训基地"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_shangwushixun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/shangwushixun" />
+                    <TextView
+                        android:id="@+id/fengmao_shangwushixun_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="商务实训基地"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+            </TableRow>
+            <TableRow>
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_guanlishixun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/guanlishixun" />
+                    <TextView
+                        android:id="@+id/fengmao_guanlishixun_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="管理实训基地"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/biankuangshape"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/fengmao_waiyushixun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/waiyushixun" />
+                    <TextView
+                        android:id="@+id/fengmao_waiyushixun_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="外语实训基地"
+                        android:drawableTop="@drawable/xiushixiantiao"
+                        android:padding="5px" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/xinqiao_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="176dp"
+        android:src="@drawable/home_bg"
+         />
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:padding="5dp"
+        android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_margin="2dp"
+                android:id="@+id/iv_overview"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@drawable/home_overview" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_margin="2dp"
+                android:id="@+id/iv_majors"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@drawable/home_majors" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_margin="2dp"
+                android:id="@+id/iv_enrollment"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@drawable/home_enrollment" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_margin="2dp"
+                android:id="@+id/iv_social"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/home_social" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_margin="2dp"
+                android:id="@+id/iv_evaluating"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/home_evaluating" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_margin="2dp"
+                android:id="@+id/iv_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/home_schedule" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView android:scaleType="fitXY"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1.3dp"
+                android:id="@+id/iv_scence"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:src="@drawable/home_scence" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1.3dp"
+                android:id="@+id/iv_institution"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:src="@drawable/home_institution" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1.3dp"
+                android:id="@+id/iv_news"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:src="@drawable/home_news" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1.3dp"
+                android:id="@+id/iv_map"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:src="@drawable/home_map" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/iv_mooc"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/home_mooc" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/iv_test"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/home_test" />
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

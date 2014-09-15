@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <FrameLayout
+        android:id="@+id/course_item_image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/teacher_backgound" >
+
+        <ImageView
+            android:id="@+id/course_item_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/mook_book_sample" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/mook_play_dark" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/course_item_image_layout"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/course_item_image_layout"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/course_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="HTML5从入门到精通"
+            android:textColor="@color/color_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/course_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="类型：职业教育 IT培训 综合" />
+
+        <TextView
+            android:id="@+id/course_item_play_counts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="播放次数:10.9万" />
+    </LinearLayout>
+
+</RelativeLayout>
