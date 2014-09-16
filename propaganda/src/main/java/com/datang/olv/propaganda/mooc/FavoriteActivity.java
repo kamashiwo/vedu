@@ -91,15 +91,15 @@ public class FavoriteActivity  extends FragmentActivity implements View.OnClickL
      * 添加测试数据
      */
     private void setData(){
-        list=new ArrayList<Video>();
-        for(int i=0;i<30;i++){
-            Video v=new Video();
-            v.setId(i);
-            v.setName("课程：课程"+i);
-            v.setClassify("教育 综合");
-            v.setPlayCount(10000+i);
-            list.add(v);
-        }
+//        list=new ArrayList<Video>();
+//        for(int i=0;i<30;i++){
+//            Video v=new Video();
+//            v.setId(i);
+//            v.setName("课程：课程"+i);
+//            v.setClassify("教育 综合");
+//            v.setPlayCount(10000+i);
+//            list.add(v);
+//        }
         adapter=new CourseListAdapter(list,this);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);

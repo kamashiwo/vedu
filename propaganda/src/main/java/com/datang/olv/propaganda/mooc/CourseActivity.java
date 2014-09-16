@@ -1,11 +1,11 @@
 package com.datang.olv.propaganda.mooc;
 
 import android.app.Activity;
-import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,21 +15,25 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.Toast;
 
+import com.datang.olv.propaganda.HttpClient.HttpClientInterface;
+import com.datang.olv.propaganda.OlvApplication;
 import com.datang.olv.propaganda.R;
-import com.datang.olv.propaganda.main.MenuListFragment;
-import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.datang.olv.propaganda.evaluate.TeachersActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Handler;
+
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
 
 /**
  * Created by l on 14-9-2.
  */
-public class CourseActivity  extends FragmentActivity implements View.OnClickListener,AdapterView.OnItemClickListener {
-    SlidingMenu menuMain;
-    SlidingMenu menuMooc;
-
+public class CourseActivity  extends Activity implements View.OnClickListener,AdapterView.OnItemClickListener {
     private List<Video> list;
     private ListView listView;//视频课程列表
     private LinearLayout dropdownMenu;//下拉菜单按钮
@@ -40,43 +44,36 @@ public class CourseActivity  extends FragmentActivity implements View.OnClickLis
     private ListView courseClassesListView;//下拉菜单中的listview
     private ArrayAdapter<String> arrayAdapter;//下拉菜单适配器
     private String[] courseList;
+
+    private Context mctx;
+
+    private android.os.Handler handler = new android.os.Handler(){
+        public void handleMessage(Message msg){
+            switch (msg.what) {
+                case 1:
+                    Toast.makeText(mctx, "获取信息成功", Toast.LENGTH_SHORT).show();
+                    adapter.notifyDataSetChanged();
+//                    m_dialog.cancel();
+//                    Intent intent=new Intent();
+//                    intent.setClass(mctx, TeachersActivity.class);
+//                    startActivity(intent);
+//                    finish();
+                    break;
+                case 2:
+                    Toast.makeText(getApplicationContext(), "获取信息失败", Toast.LENGTH_SHORT).show();
+//                    m_dialog.cancel();
+                    break;
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course);
+        mctx = this;
         init();
         setData();
-
-        // configure the Main SlidingMenu
-        menuMain = new SlidingMenu(this);
-        menuMain.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
-        menuMain.setShadowWidthRes(R.dimen.shadow_width);
-        menuMain.setShadowDrawable(R.drawable.shadow);
-        menuMain.setBehindOffsetRes(R.dimen.slidingmenu_offset);
-        menuMain.setFadeDegree(.035f);
-        menuMain.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
-        menuMain.setMenu(R.layout.menu_frame);
-        android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.menu_frame, new MenuListFragment());
-        ft.addToBackStack(null);
-        ft.commit();
-
-
-        // configure the Mooc SlidingMenu
-        menuMooc = new SlidingMenu(this);
-        menuMooc.setMode(SlidingMenu.RIGHT);
-        menuMooc.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
-        menuMooc.setShadowWidthRes(R.dimen.shadow_width);
-        menuMooc.setShadowDrawable(R.drawable.shadow);
-        menuMooc.setBehindOffsetRes(R.dimen.slidingmenu_offset);
-        menuMooc.setFadeDegree(.035f);
-        menuMooc.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
-        menuMooc.setMenu(R.layout.menu_frame);
-        //getSupportFragmentManager().beginTransaction().add(R.id.menu_frame, new MoocMenuListFragment()).commit();
-//        ft.add(R.id.menu_frame, new MoocMenuListFragment());
-//        ft.addToBackStack(null);
-//        ft.commit();
-
     }
     private void init(){
         listView=(ListView)findViewById(R.id.course_booklist);
@@ -95,20 +92,42 @@ public class CourseActivity  extends FragmentActivity implements View.OnClickLis
         courseClassesListView=(ListView)layout.findViewById(R.id.course_classes_list);
         courseClassesListView.setOnItemClickListener(this);
 
+        OlvApplication olvapp = (OlvApplication)getApplication();
+        String strtoken = olvapp.getHttpClientToken();
+
+        HttpClientInterface.GetCoursesInfo(strtoken, new Callback<List<HttpClientInterface.Courses>>() {
+            @Override
+            public void success(List<HttpClientInterface.Courses> courseses, Response response) {
+                handler.sendMessage(handler.obtainMessage(1));
+
+                for(HttpClientInterface.Courses df:courseses){
+                    Video v=new Video();
+                    v.setId(df.get_id());
+                    v.setName(df.getName());
+                    v.setClassify(df.getInfo());
+                    list.add(v);
+                }
+            }
+
+            @Override
+            public void failure(RetrofitError error) {
+                handler.sendMessage(handler.obtainMessage(2));
+            }
+        });
     }
     /**
      * 添加测试数据
      */
     private void setData(){
         list=new ArrayList<Video>();
-        for(int i=0;i<30;i++){
-            Video v=new Video();
-            v.setId(i);
-            v.setName("课程：课程"+i);
-            v.setClassify("教育 综合");
-            v.setPlayCount(10000+i);
-            list.add(v);
-        }
+//        for(int i=0;i<30;i++){
+//            Video v=new Video();
+//            v.setId(i);
+//            v.setName("课程：课程"+i);
+//            v.setClassify("教育 综合");
+//            v.setPlayCount(10000+i);
+//            list.add(v);
+//        }
         adapter=new CourseListAdapter(list,this);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
@@ -119,8 +138,6 @@ public class CourseActivity  extends FragmentActivity implements View.OnClickLis
         }
         arrayAdapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, courseList);
         courseClassesListView.setAdapter(arrayAdapter);
-
-
     }
     @Override
     public void onClick(View v) {
@@ -149,13 +166,6 @@ public class CourseActivity  extends FragmentActivity implements View.OnClickLis
             popupWindow.dismiss();
         }
     }
-    @Override
-    public void onBackPressed() {
-        if (menuMain.isMenuShowing()) {
-            menuMain.showContent();
-        } else {
-            super.onBackPressed();
-        }
-    }
+
 
 }

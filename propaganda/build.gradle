@@ -30,4 +30,5 @@ dependencies {
     compile files('libs/BaiduLBS_Android.jar')
     compile files('libs/PanoramaGL_0.1.jar')
     compile files('libs/locSDK_4.2.jar')
+    compile files('libs/retrofit-1.6.1.jar')
 }
