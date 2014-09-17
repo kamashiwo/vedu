@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.datang.olv.propaganda.HttpClient.HttpClientInterface;
+import com.datang.olv.propaganda.OlvApplication;
 import com.datang.olv.propaganda.R;
 import com.squareup.picasso.Picasso;
 
@@ -42,9 +44,20 @@ public final class HistoryFragment extends Fragment {
 
         mList = new ArrayList<String>();
 
-        mList.add(Str1993);
-        mList.add(Str1999);
-        mList.add(Str2005);
+        OlvApplication app = (OlvApplication)getActivity().getApplication();
+
+        HttpClientInterface.Schoolinfo mch = app.getGschoolinfo();
+
+        if (mch != null){
+            for (int i=0; i<mch.histories.size();i++){
+                HttpClientInterface.historiesinfo temp = mch.histories.get(i);
+                mList.add(temp.getDesc());
+            }
+        }
+
+        //mList.add(Str1993);
+        //mList.add(Str1999);
+        //mList.add(Str2005);
 
         statusAdapter = new HistoryListAdapter(context, mList);
         listView.setAdapter(statusAdapter);
