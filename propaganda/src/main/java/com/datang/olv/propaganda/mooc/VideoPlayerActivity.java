@@ -104,7 +104,7 @@ public class VideoPlayerActivity extends Activity implements MediaPlayer.OnBuffe
 
     private void playVideo() {
         this.mediaPlayer.reset();
-        File file = new File(Environment.getExternalStorageDirectory(), "test.mp4");
+        File file = new File(Environment.getExternalStorageDirectory(), "MOV_0074.mp4");
 
         if (!file.exists()) {
             Log.e("VideoPlayerActivity", file.getAbsolutePath() + " Video NOT EXIST");

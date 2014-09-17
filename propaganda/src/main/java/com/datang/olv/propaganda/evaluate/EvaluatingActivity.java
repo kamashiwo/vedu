@@ -62,6 +62,10 @@ public class EvaluatingActivity extends FragmentActivity implements View.OnClick
                 case 2:
                     Toast.makeText(getApplicationContext(), "登陆失败", Toast.LENGTH_SHORT).show();
                     m_dialog.cancel();
+                    intent=new Intent();
+                    intent.setClass(mctx, TeachersActivity.class);
+                    startActivity(intent);
+                    finish();
                     break;
             }
         }
@@ -153,6 +157,7 @@ public class EvaluatingActivity extends FragmentActivity implements View.OnClick
                         }
                     } catch (IOException e) {
                         e.printStackTrace();
+                        handler.sendMessage(handler.obtainMessage(2));
                     }
                 }
             });
